@@ -9,7 +9,11 @@ class EmployeeController extends Controller
 {
     //
 
-    public function AddEmployee(Request $rec){
+    public function AddEmplpyee(){
+        return view('addEmployee');
+    }
+
+    public function StoreEmployee(Request $rec){
         Employee::create([
             'nama' => $req->nama,
             'umur' => $req->umur,
@@ -19,7 +23,7 @@ class EmployeeController extends Controller
         return redirect('/');
     }
 
-    public function ViewAllKaryawam(){
+    public function ViewAllEmployee(){
         $employee = Employee::all();
 
         return view('welcome')->with('employee_employee', 'employees');
