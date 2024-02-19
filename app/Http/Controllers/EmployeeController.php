@@ -29,4 +29,33 @@ class EmployeeController extends Controller
 
         return view('welcome')->with('employee_employee', 'employees');
     }
+
+    public function ViewEmployee($id){
+        $employee = Employee::findOrFail($id);
+ 
+        return view('EmployeeDetail')->with('employee', $employee);
+    }
+
+    public function editEmployee($id){
+        $employee = Employee::findOrFail($id);
+
+        return view('updateEmployee')->with('employee', $employee);
+    }
+
+    public function updateEmployee($id, Request $req){
+        $Employee = Employee::findOrFail($id)->update([
+            'nama' => $req->nama,
+            'umur' => $req->umur,
+            'alamat' => $req->alamat,
+            'no_hp' => $req->no_hp,
+        ]);
+
+        return redirect('/');
+    }
+
+    public function deleteEmployee($id){
+        Employee::destroy($id);
+
+        return redirect('/');
+    }
 }
