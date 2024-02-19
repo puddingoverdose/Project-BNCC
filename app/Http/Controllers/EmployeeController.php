@@ -13,11 +13,12 @@ class EmployeeController extends Controller
         return view('addEmployee');
     }
 
-    public function StoreEmployee(Request $rec){
+    public function StoreEmployee(Request $req){
         Employee::create([
             'nama' => $req->nama,
             'umur' => $req->umur,
             'alamat' => $req->alamat,
+            'no_hp' => $req->no_hp,
         ]);
 
         return redirect('/');

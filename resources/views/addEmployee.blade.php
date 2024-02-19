@@ -14,24 +14,25 @@
 
         <div class="mb-3">
           <label for="employee-name" class="form-label">Nama Karyawan</label>
-          <input type="text" class="form-control" id="employee-name" name="nama" minlength="5" maxlength="20">
+          <input type="text" class="form-control" id="employee-name" name="nama" minlength="5" maxlength="20" required>
         </div>
 
         <div class="mb-3">
             <label for="employee-age" class="form-label">Umur Karyawan</label>
-            <input type="number" id="employee-age" name="umur" min="20">
+            <input type="number" id="employee-age" name="umur" min="20" required>
         </div>
 
         <div class="mb-3">
             <label for="employee-address" class="form-label">Alamat Karyawan</label>
-            <input type="text" class="form-control" id="employee-address" name="alamat" minlength="10" maxlength="40">
+            <input type="text" class="form-control" id="employee-address" name="alamat" minlength="10" maxlength="40" required>
         </div>
 
         <div class="mb-3">
-            <label for="book-price" class="form-label">Book Price</label>
-            <input type="number" class="form-control" id="book-price" name="harga">
+            <label for="employee-phone-number" class="form-label">Nomor HP</label>
+            <input type="tel" class="form-control" id="employee-phone-number" name="no_hp"
+            pattern = "08\d{7,10}" required>
         </div>
-        
+
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
 

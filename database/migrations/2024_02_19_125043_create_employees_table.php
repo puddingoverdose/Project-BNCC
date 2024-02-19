@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string("nama");
             $table->integer("umur");
             $table->string("alamat");
-            $table->string("no-hp");
+            $table->string("no_hp");
         });
     }
 
