@@ -9,29 +9,29 @@
 </head>
 <body>
     <h2>Update Employee</h2> 
-    <form method="POST" action="/update/employee/{{$employee->id}}">
+    <form method="POST" action="/update/employee/{{$employees->id}}">
         @csrf
         @method('PATCH')
 
         <div class="mb-3">
           <label for="employee-title" class="form-label">Nama Karyawan</label>
-          <input type="text" class="form-control" id="employee-title" name="nama" value="{{$employee->nama}}">
+          <input type="text" class="form-control" id="employee-title" name="nama" value="{{$employees->nama}}">
         </div>
 
         <div class="mb-3">
             <label for="employee-age" class="form-label">Umur Karyawan</label>
-            <input type="number" id="employee-age" name="umur" min="20" value="{{$employee->umur}}">
+            <input type="number" id="employee-age" name="umur" min="20" value="{{$employees->umur}}">
         </div>
 
         <div class="mb-3">
             <label for="employee-address" class="form-label">Alamat Karyawan</label>
-            <input type="text" class="form-control" id="employee-address" name="alamat" minlength="10" maxlength="40" value="{{$employee->alamat}}">
+            <input type="text" class="form-control" id="employee-address" name="alamat" minlength="10" maxlength="40" value="{{$employees->alamat}}">
         </div>
 
         <div class="mb-3">
             <label for="employee-phone-number" class="form-label">No HP</label>
             <input type="tel" class="form-control" id="employee-phone-number" name="no_hp"
-            pattern = "08\d{7,10}" value="{{$employee->no_hp}}">
+            pattern = "08\d{7,10}" value="{{$employees->no_hp}}">
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>
